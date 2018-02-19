@@ -6,13 +6,18 @@ import { AppContainer } from 'react-hot-loader';
 import App from './js/app';
 
 function renderApp(Component) {
-  render(<Component />, document.getElementById("root"));
+  render(
+    <AppContainer>
+      <Component />
+    </AppContainer>,
+    document.getElementById("root")
+  );
 }
 
 renderApp(App);
 
 if (process.env.NODE_ENV !== "production") {
   if (module.hot) {
-    module.hot.accept('./js/app', () => render(App));
+    module.hot.accept('./js/app', () => renderApp(App));
   }
 }
