@@ -23,7 +23,7 @@ describe("Photo with details component", () => {
   });
 
   it("shows an image based on supplied image url", () => {
-    expect(wrapper.contains(<img src={props.photoURL} />)).toEqual(true);
+    expect(wrapper.find(`[src="${props.photoURL}"]`)).toHaveLength(1);
   });
 
   it("shows title based on supplied title", () => {
