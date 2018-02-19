@@ -1,0 +1,16 @@
+@import '~normalize.css/normalize.css';
+@import './sass/utils.scss';
+
+@font-face {
+  font-family: 'Montserrat-regular';
+  src: url('./assets/fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+    url('./assets/fonts/montserrat/Montserrat-Regular.woff') format('woff');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat-regular", sans-serif, Arial;
+}
