@@ -1,5 +1,6 @@
 @import '~normalize.css/normalize.css';
 @import './sass/utils.scss';
+@import './sass/photo-with-details.scss';
 
 @font-face {
   font-family: 'Montserrat-regular';
@@ -13,4 +14,10 @@
 
 html {
   font-family: "Montserrat-regular", sans-serif, Arial;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
 }
