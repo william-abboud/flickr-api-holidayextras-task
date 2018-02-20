@@ -1,26 +1,8 @@
-import React, { Component } from 'react';
-import flickrApi from './flickr-service';
+import React from 'react';
+import FlickrPhotos from './FlickrPhotos';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      photos: []
-    };
-  }
-
-  componentDidMount() {
-    flickrApi.getPublicPhotos()
-      .then(response => response.json())
-      .then((data) => {
-        this.setState({ photos: data });
-      });
-  }
-
-  render() {
-    return <div>Hello World</div>;
-  }
+function App() {
+  return <FlickrPhotos />;
 }
 
 export default App;
