@@ -165,6 +165,8 @@ module.exports = env => {
       hot: true,
       quiet: true, // use friendly errors plugin
       stats: "errors-only",
+      host: "127.0.0.1",
+      port: 12345
     },
     devtool: isProduction ? "source-map" : "cheap-module-source-map",
     plugins
