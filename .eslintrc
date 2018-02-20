@@ -25,5 +25,6 @@
     "react/sort-comp": "off",
     "no-underscore-dangle": "off",
     "array-bracket-spacing": "off",
+    "react/no-danger": "off",
   }
 }
