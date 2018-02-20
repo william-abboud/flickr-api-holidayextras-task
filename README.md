@@ -18,14 +18,14 @@ and all dependecies will be installed.
 
 # Usage:
 
-  - Development:
-    `npm start`
+  - To develop:
+    `$ npm start`
 
-  - Production:
-    `npm run build`
+  - To build for production:
+    `$ npm run build`
 
   - To run tests:
-    `npm test`
+    `$ npm test`
 
   - To run linter:
-    `npm run lint`
+    `$ npm run lint`
