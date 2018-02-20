@@ -1,0 +1,86 @@
+.photo-with-details {
+  $black: #212121;
+  $white: #E0E0E0;
+  $grey: #E0E0E0;
+
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 5px;
+  border: 1px solid $black;
+  padding: 20px;
+  max-width: 300px;
+  background: $white;
+
+  a {
+    color: $black;
+  }
+
+  .photo {
+    width: 100%;
+    border: 1px solid $black;
+    max-height: 200px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .title-author-container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .title {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $black;
+    flex: 0 1 100%;
+    word-break: break-all;
+  }
+
+  .author {
+    margin-left: 10px;
+    text-decoration: underline;
+    word-break: break-all;
+  }
+
+  .description {
+    word-break: break-all;
+  }
+
+  .description-trigger {
+    border: 1px solid $black;
+    box-shadow: 0 0 1px $black;
+    background: #FFF176;
+    color: $black;
+    padding: 10px 15px;
+    border-radius: 3px;
+
+    &:active {
+      box-shadow: inset 0 0 1px $black;
+      outline: none;
+    }
+  }
+
+  .Collapsible__contentInner {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .Collapsible__contentOuter {
+    margin-top: 20px;
+  }
+
+  .tags {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .tag {
+    background: #455A64;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 0;
+    color: $white;
+  }
+}
