@@ -38,14 +38,14 @@ class FlickrPhotos extends Component {
       <div>
         {
           photos.map(photo => (
-              <PhotoWithDetails
-                photoURL={photo.media.m}
-                title={photo.title}
-                description={photo.description}
-                authorName={this.extractAuthorName(photo.author)}
-                photoLink={photo.link}
-                tags={photo.tags}
-              />
+            <PhotoWithDetails
+              photoURL={photo.media.m}
+              title={photo.title}
+              description={photo.description}
+              authorName={this.extractAuthorName(photo.author)}
+              photoLink={photo.link}
+              tags={photo.tags}
+            />
           ))
         }
       </div>

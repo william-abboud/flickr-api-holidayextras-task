@@ -26,5 +26,6 @@
     "no-underscore-dangle": "off",
     "array-bracket-spacing": "off",
     "react/no-danger": "off",
+    "class-methods-use-this": "off",
   }
 }

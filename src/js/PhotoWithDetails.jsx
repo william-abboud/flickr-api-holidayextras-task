@@ -19,7 +19,6 @@ function PhotoWithDetails({
   title,
   description,
   hideDescription,
-  authorLink,
   authorName,
   photoLink,
   tags
