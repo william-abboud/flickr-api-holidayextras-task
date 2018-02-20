@@ -10,7 +10,7 @@ describe("Photo with details component", () => {
   const props = {
     photoURL: "some-url-string",
     photoLink: "some-photo-link",
-    authorLink: "some-author-link",
+    authorName: "Jarvis",
     title: "Some title",
     description: "This is a fake description",
     tags: ["tag one", "tag two", "tag three"],
@@ -35,17 +35,34 @@ describe("Photo with details component", () => {
   });
 
   it("shows tags", () => {
-    const text = wrapper.text();
-    const isTagShown = tag => expect(text.indexOf(tag)).not.toBe(-1);
+    const isTagShown = tag => expect(wrapper.text().indexOf(tag)).not.toBe(-1);
 
     props.tags.forEach(isTagShown);
   });
 
-  it("provides link to author", () => {
-    expect(wrapper.find(`[href="${props.authorLink}"]`)).toHaveLength(1);
-  });
-
   it("provides link to image", () => {
     expect(wrapper.find(`[href="${props.photoLink}"]`)).toHaveLength(1);
+  });
+
+  it("shows default 'Untitled' title when no title is set", () => {
+    wrapper.setProps({ title: undefined });
+
+    expect(wrapper.text().indexOf("Untitled")).not.toBe(-1);
+  });
+
+  it("shows default 'Untitled' title when empty string is passed for title", () => {
+    wrapper.setProps({ title: "" });
+
+    expect(wrapper.text().indexOf("Untitled")).not.toBe(-1);
+  });
+
+  it("shows default title when white space only string is passed for title", () => {
+    wrapper.setProps({ title: "" });
+
+    expect(wrapper.text().indexOf("Untitled")).not.toBe(-1);
+  });
+
+  it("shows author name", () => {
+    expect(wrapper.text().indexOf(props.authorName)).not.toBe(-1);
   });
 });
