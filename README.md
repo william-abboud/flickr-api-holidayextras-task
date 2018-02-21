@@ -1,7 +1,7 @@
 # flickr-api-holidayextras-task
 This repo contains the solution to the Holiday Extras' Flickr API task: https://github.com/holidayextras/culture/blob/master/recruitment/developer-flickr-task.md
 
-#Important Notes:
+# Important Notes:
 
 Unfortunately due to Cross-Origin issues I could not directly fetch JSON data from the link to the Flickr API provided
 so I fetched the data via JSONP.
