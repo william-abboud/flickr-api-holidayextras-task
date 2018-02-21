@@ -1,5 +1,6 @@
 import './main.scss';
 import "babel-polyfill";
+import objectFitImages from 'object-fit-images';
 import { render } from 'react-dom';
 import React from 'react';
 import { AppContainer } from 'react-hot-loader';
@@ -12,6 +13,8 @@ function renderApp(Component) {
     </AppContainer>,
     document.getElementById("root")
   );
+
+  objectFitImages();
 }
 
 renderApp(App);

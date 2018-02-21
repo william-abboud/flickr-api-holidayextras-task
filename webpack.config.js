@@ -45,7 +45,7 @@ module.exports = env => {
     new webpack.DefinePlugin({
       "process.env.NODE_ENV": JSON.stringify(envStr)
     }),
-    //new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ];
 
   const developmentPlugins = [
@@ -73,6 +73,7 @@ module.exports = env => {
         plugins: isProduction ?
           [
             require("autoprefixer")(),
+            require('postcss-object-fit-images'),
             require("cssnano")()
           ]
           :
