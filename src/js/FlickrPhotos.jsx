@@ -16,7 +16,8 @@ class FlickrPhotos extends Component {
   componentDidMount() {
     flickrApi.getPublicPhotos()
       .then(response => response.json())
-      .then(data => this.setState({ photos: data.items }));
+      .then(data => this.setState({ photos: data.items }))
+      .catch(err => console.error(err));
   }
 
   extractAuthorName(authorProp) {
@@ -35,16 +36,18 @@ class FlickrPhotos extends Component {
     }
 
     return (
-      <div>
+      <div className="flickr-photos">
         {
           photos.map(photo => (
             <PhotoWithDetails
+              key={photo.link}
               photoURL={photo.media.m}
               title={photo.title}
               description={photo.description}
               authorName={this.extractAuthorName(photo.author)}
               photoLink={photo.link}
               tags={photo.tags}
+              hideDescription
             />
           ))
         }
