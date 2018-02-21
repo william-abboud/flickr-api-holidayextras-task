@@ -8,6 +8,7 @@
     "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server\"",
     "stats": "webpack --env.production --profile --json > stats.json",
     "test": "jest",
+    "debug-tests": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand",
     "lint": "eslint --ext .jsx,.js src/"
   },
   "keywords": [],
@@ -63,6 +64,7 @@
     "react-hot-loader": "^3.1.3"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test/setup.js",
     "moduleFileExtensions": [
       "js",
       "jsx"
