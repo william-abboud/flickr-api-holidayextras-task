@@ -3,12 +3,13 @@ This repo contains the solution to the Holiday Extras' Flickr API task: https://
 
 #Important Notes:
 
-Unfortunately due to Cross-Origin issues I could not directly fetch JSON data from the link to hte Flickr API provided
+Unfortunately due to Cross-Origin issues I could not directly fetch JSON data from the link to the Flickr API provided
 so I fetched the data via JSONP.
 
-# Installation:
+This repo uses my awesome Webpack configuration which powers all my modern web applications.
+You can check out all its rich features at here -> https://github.com/william-abboud/webpack-config.
 
-This repo uses a cut-out version of my awesome Webpack configuration which powers all my modern web applications: https://github.com/william-abboud/webpack-config.
+# Installation:
 
 Assuming you have NodeJS v9.x.x or newer and npm v5.x.x run:
 
