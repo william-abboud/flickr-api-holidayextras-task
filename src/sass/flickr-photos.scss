@@ -1,6 +1,15 @@
 .flickr-photos {
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 20px;
+
+  .photo-with-details {
+    margin: 20px 0;
+  }
+
+  @inlcude for-phone-only {
+    justify-content: center;
+  }
 }
